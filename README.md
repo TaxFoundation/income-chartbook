@@ -39,7 +39,16 @@ This is a chart about things and stuff. Whoo!
 
 ### Creating HTML files
 
-Building the final copy of the chart book for distribution is easy. Once you have [set up Jekyll on your computer](http://jekyllrb.com/docs/installation/), just go to the directoy of the generator in the command line and tell Jekyll to build.
+First, you'll need to edit `_config.yml` to set the correct URL structure for the chart book.
+
+```
+url: "http://sample-site.com"
+baseurl: "/name-of-this-chart-book"
+```
+
+For testing locally, you'll want `url` to be `http://localhost:4000`, assuming Jekyll server defaults. Change it to your host's URL before the final build.
+
+Building the final copy of the chart book for distribution is easy. Once you have [set up Jekyll on your computer](http://jekyllrb.com/docs/installation/), just go to the directory of the generator in the command line and tell Jekyll to build.
 
 ```
 $ cd chartbook
