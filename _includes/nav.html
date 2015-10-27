@@ -1,0 +1,7 @@
+<nav id="nav-menu">
+  <ul>
+  {% for slide in site.slides %}
+    <li onclick="changeSlide('#{{ slide.title | slugify }}')" {% if slide.color %}class="li-material-{{ slide.color }}"{% endif %}>{{ slide.title }}</li>
+  {% endfor %}
+  </ul>
+</nav>

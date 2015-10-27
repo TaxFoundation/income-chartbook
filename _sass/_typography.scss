@@ -1,0 +1,72 @@
+header {
+  @include set-font(24px, $base-font-weight, $base-line-height, $header-font-color);
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  @include media-query($on-laptop) {
+    .chartbook-nav-icons i {
+        margin-left: 15px;
+    }
+  }
+}
+
+section h1 {
+  margin: 0 0 6px 0;
+  @include set-font(36px, 700, 1.3);
+
+  @include media-query($on-palm) {
+    @include set-font(24px, 700, 1.2);
+  }
+}
+
+section h2 {
+  font-style: italic;
+  margin: 0 0 10px 0;
+  @include set-font(24px, $base-font-weight, 1.4);
+
+  @include media-query($on-palm) {
+    @include set-font(18px, $base-font-weight, 1.2);
+  }
+}
+
+section p {
+  margin-bottom: 12px;
+  @include set-font(18px);
+
+  @include media-query($on-palm) {
+    @include set-font(14px, $base-font-weight, 1.4);
+  }
+}
+
+section blockquote p {
+  @include set-font(14px, $base-font-weight, 1.3, $notes-font-color);
+
+  @include media-query($on-palm) {
+    @include set-font(12px, $base-font-weight, 1.3, $notes-font-color);
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 700;
+}
+
+nav {
+  @include set-font(16px);
+}
+
+.share-buttons {
+  @include set-font();
+}
+
+.slide-title {
+  @include media-query($on-laptop) {
+    margin: 36px 0;
+  }
+}

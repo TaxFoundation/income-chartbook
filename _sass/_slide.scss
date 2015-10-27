@@ -1,0 +1,127 @@
+section {
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  overflow-x: hidden;
+  position: absolute;
+  right: 0;
+  top: $header-height;
+  visibility: hidden;
+  @include transition(opacity 0.4s linear);
+  @include set-font(18px);
+}
+
+.slide-container {
+  bottom: 0;
+  left: $nav-width;
+  margin: 0;
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @include media-query($on-palm) {
+    left: 0;
+  }
+}
+
+.slide-content {
+  left: 10%;
+  position: absolute;
+  right: 10%;
+  top: 20px;
+
+  @include media-query($on-palm) {
+    left: 20px;
+    right: 20px;
+  }
+}
+
+.active-slide,
+.next-slide,
+.previous-slide {
+  visibility: visible;
+}
+
+.active-slide {
+  opacity: 1;
+  left: 0;
+  right: 0;
+}
+
+.next-slide {
+  left: 100%;
+  right: 200%;
+}
+
+.previous-slide {
+  left: -100%;
+  right: 0;
+}
+
+img.chart-wide {
+  width: 100%;
+}
+
+img.chart-square {
+  float: left;
+  margin: 0 20px 20px 0;
+  width: 60%;
+
+  @include media-query($on-laptop) {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.share-buttons {
+  margin: 10px 0;
+
+  @include media-query($on-palm) {
+    display: table;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+a.social-link {
+  display:inline-block;
+  background-color: #fff;
+  color: #aaa;
+  text-decoration:none;
+  padding:6px 12px;
+  margin: 0 16px 0 0;
+  @include transition(background 0.1s linear);
+
+  span.hide-on-small {
+    margin: 0 0 0 12px;
+  }
+
+  @include media-query($on-palm) {
+    color: #fff;
+    display: table-cell;
+    margin: 0 auto;
+    padding: 6px 0;
+    text-align: center;
+    width: 20%;
+  }
+}
+
+@each $social-media, $social-color in $social-colors {
+  a:hover.#{$social-media} {
+    background-color: $social-color;
+    color: #fff;
+  }
+
+  @include media-query($on-palm) {
+    a.#{$social-media} {
+      background-color: $social-color;
+    }
+  }
+}

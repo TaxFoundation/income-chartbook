@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+header,
+{
+  padding: 12px;
+}
+
+nav,
+.slides {
+  vertical-align: top;
+}
+
+@include media-query($on-palm) {
+  .hide-on-small {
+    display: none;
+  }
+}

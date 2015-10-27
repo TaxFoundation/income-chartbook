@@ -1,0 +1,10 @@
+<div class="chapter-container">
+  <div class="chapter-color-material-{{ include.slide.color }}">
+    <h1 class="chapter-title">{{ include.slide.title }}</h1>
+    {% if include.slide.subtitle %}
+      <h2 class="chapter-subtitle">{{ include.slide.subtitle }}</h2>
+    {% endif %}
+
+    {{ include.slide.content }}
+  </div>
+</div>

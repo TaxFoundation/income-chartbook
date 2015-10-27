@@ -1,0 +1,100 @@
+header {
+  background-color: $brand-color;
+  border-bottom: solid 1px darken($brand-color, 5%);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+  display: table;
+  left: 0;
+  height: $header-height;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+
+  .chartbook-name {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .chartbook-nav-icons {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+
+    i {
+      margin-left: 10px;
+    }
+  }
+}
+
+nav {
+  background-color: $nav-background-color;
+  bottom: 0;
+  box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.3);
+  left: 0;
+  overflow-y: auto;
+  position: absolute;
+  top: $header-height;
+  @include transition(left 0.5s ease-in-out);
+  width: $nav-width;
+  z-index: 10;
+
+  @include media-query($on-laptop) {
+    box-shadow: none;
+    left: -100%;
+    position: fixed;
+    width: 100%;
+  }
+
+  li {
+    border-left: solid 1px rgba(0, 0, 0, 0.2);
+    border-bottom: solid 1px $nav-border-color;
+    cursor: pointer;
+    min-height: $header-height / 2;
+    padding: 12px;
+    @include transition(background 0.1s linear);
+    vertical-align: middle;
+    width: inherit;
+
+    &:hover {
+      background-color: lighten($nav-background-color, 10%);
+    }
+
+    &.active-li {
+      background-color: lighten($nav-background-color, 10%);
+    }
+  }
+
+  @each $palette-color, $palette-value in $palette-colors {
+    .li-#{$palette-color} {
+      border-bottom: solid 1px nth($palette-value, 1);
+      background: nth($palette-value, 1);
+      color: #fff;
+    }
+    .li-#{$palette-color}:hover {
+      background: nth($palette-value, 2);
+      border-bottom: solid 1px nth($palette-value, 2);
+    }
+    .li-#{$palette-color}.active-li {
+      background: nth($palette-value, 2);
+      border-bottom: solid 1px nth($palette-value, 2);
+    }
+  }
+}
+
+.nav-button {
+  cursor: pointer;
+}
+
+.nav-open-mobile {
+  left: 0;
+}
+
+.nav-menu-toggle {
+  display: none;
+
+  @include media-query($on-laptop) {
+    display: inline-block;
+    margin: 0 10px  0 0;
+  }
+}

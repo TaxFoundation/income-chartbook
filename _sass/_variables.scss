@@ -1,0 +1,49 @@
+$header-height: 64px;
+$nav-width: 256px;
+
+// Colors
+$brand-color: #0094ff;
+
+$base-font-color: #48484a;
+$notes-font-color: #8b8e90;
+
+$header-font-color: #fff;
+
+$nav-font-color: #fff;
+$nav-background-color: #f0f0f0;
+$nav-border-color: #dedede;
+
+$palette-colors: (
+  material-red:    (#f44336, #FF5252),
+  material-pink:   (#e91e63, #f50057),
+  material-purple: (#673ab7, #7C4DFF),
+  material-blue:   (#2196f3, #64B5F6),
+  material-cyan:   (#00bcd4, #00e5ff),
+  material-teal:   (#009688, #1de9b6),
+  material-green:  (#4caf50, #66BB6A),
+  material-yellow: (#ffeb38, #ffea00),
+  material-amber:  (#ffc107, #FFD740),
+  material-orange: (#ff9800, #FFAB40)
+);
+
+$social-colors: (
+  facebook: #4a66b7,
+  twitter:  #00acee,
+  linkedin: #1b86bc,
+  gplus:    #dd4b38,
+  email:    #ff9600
+);
+
+// Screen sizes
+$on-palm:          800px;  // Value also set in main.js for swipe controls
+$on-laptop:        1080px;
+$breakpoints: (
+  small: 800px,
+  medium: 1080px
+);
+
+// Typograpgy
+$base-font-family: Lato, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$base-line-height: 1.5;

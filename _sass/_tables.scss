@@ -1,0 +1,44 @@
+table {
+  border: solid #ddd 1px;
+  border-collapse: separate;
+  border-left: 0;
+  border-radius: 4px;
+  margin: 25px auto;
+  width: 100%;
+
+  tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+  }
+}
+
+td,
+th {
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  padding: 10px 15px;
+}
+
+th {
+  border-top: 0;
+  font-weight: 700;
+}
+
+th:first-child {
+  border-radius: 4px 0 0;
+}
+
+th:last-child {
+  border-radius: 0 4px 0 0;
+}
+
+th:only-child {
+  border-radius: 4px 4px 0 0;
+}
+
+tr:last-child td:first-child {
+  border-radius: 0 0 0 4px;
+}
+
+tr:last-child td:last-child {
+  border-radius: 0 0 4px;
+}

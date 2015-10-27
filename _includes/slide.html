@@ -1,0 +1,56 @@
+<div class="slide-content">
+  <h1 class="slide-title">{{ include.slide.title }}</h1>
+  {% if include.slide.subtitle %}
+    <h2>{{ include.slide.subtitle }}</h2>
+  {% endif %}
+
+  <div class="share-buttons">
+    <a
+      class="social-link facebook"
+      href="http://www.facebook.com/share.php?u={{ include.slide.title | slugify | prepend: '/#' | prepend: site.baseurl | prepend: site.url | uri_escape }}"
+      id="fb-share"
+      rel="nofollow"
+      target="_blank"
+      title="Share on Facebook">
+        <i class="fa fa-facebook"></i><span class="hide-on-small"> Share</span>
+    </a>
+    <a
+      class="social-link twitter"
+      href="https://twitter.com/intent/tweet/?text={{ include.slide.title | uri_escape }}&url={{ include.slide.title | slugify | prepend: '/#' | prepend: site.baseurl | prepend: site.url | uri_escape }}&via=TaxFoundation"
+      id="tweet"
+      rel="nofollow"
+      target="_blank"
+      title="Tweet this content">
+        <i class="fa fa-twitter"></i><span class="hide-on-small"> Tweet</span>
+    </a>
+    <a
+      class="social-link linkedin"
+      href="http://www.linkedin.com/shareArticle?mini=true&url={{ include.slide.title | slugify | prepend: '/#' | prepend: site.baseurl | prepend: site.url | uri_escape }}"
+      id="linkedin"
+      rel="nofollow"
+      target="_blank"
+      title="Share on LinkedIn">
+        <i class="fa fa-linkedin"></i><span class="hide-on-small"> LinkedIn</span>
+    </a>
+    <a
+      class="social-link gplus"
+      href="https://plus.google.com/share?url={{ include.slide.title | slugify | prepend: '/#' | prepend: site.baseurl | prepend: site.url | uri_escape }}"
+      id="gplus-share"
+      title="Plus 1 on Google+">
+        <i class="fa fa-google-plus"></i>
+    </a>
+    <a
+      class="social-link email"
+      href="mailto:?body=Take a look at this chart I found: {{ include.slide.title }}. You can see it here: {{ include.slide.title | slugify | prepend: '/#' | prepend: site.baseurl | prepend: site.url | uri_escape }}"
+      id="email-share"
+      title="Email to a Friend">
+        <i class="fa fa-envelope"></i>
+    </a>
+  </div>
+
+  {% if include.slide.chart %}
+    <img {% if include.slide.chart_layout %}class="chart-{{ include.slide.chart_layout }}"{% endif %} src="images/{{ include.slide.chart }}">
+  {% endif %}
+
+  {{ include.slide.content }}
+</div>

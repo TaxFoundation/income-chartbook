@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<noscript>
+  <p>This digital publication requires JavaScript to be viewed properly. Your browser currently has JavaScript disabled. To view this publication, please enabled JavaScript.</p>
+</noscript>
+
+{% for s in site.slides %}
+
+  {% if s.page == 'cover' %}
+
+    <section class="cover" id="{{ s.title | slugify }}" {% if s.background %}style="background-image:url('images/{{ s.background }}');background-size:cover;"{% endif %}>
+      {% include cover.html slide=s %}
+    </section>
+
+  {% elsif s.page == 'chapter' %}
+
+    <section id="{{ s.title | slugify }}" {% if s.background %}style="background-image:url('images/{{ s.background }}');background-size:cover;"{% endif %}>
+      {% include chapter.html slide=s %}
+    </section>
+
+  {% else %}
+
+    <section id="{{ s.title | slugify }}">
+      {% include slide.html slide=s %}
+    </section>
+
+  {% endif %}
+
+{% endfor %}
