@@ -20,7 +20,7 @@ To create chart book pages, use the following YAML front matter at the beginning
 
 ### Example Slide in the Chart Book
 
-````
+```
 ---
 title: "Example Chart Book Page"
 subtitle: "The rate of change of things over an arbitrary section of time"
@@ -36,14 +36,14 @@ This is a chart about things and stuff. Whoo!
 
 [This is a link to an external reference](http://example.com)
 
-```
+    ```
 This is a blue blurb of text.
-```
+    ```
 
 > This is a note or a source reference.
 >
 > This is more of the note or source reference.
-````
+```
 
 ### Creating HTML files
 
