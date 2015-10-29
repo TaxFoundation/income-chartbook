@@ -49,6 +49,16 @@ section blockquote p {
   }
 }
 
+section pre code {
+  @include set-font(16px, 700, 1.3, $brand-color);
+  margin-bottom: 16px;
+
+  @include media-query($on-palm) {
+    @include set-font(13px, 700, 1.3, $brand-color);
+    margin-bottom: 16px;
+  }
+}
+
 em {
   font-style: italic;
 }
