@@ -45,6 +45,10 @@ This is a blue blurb of text.
 > This is more of the note or source reference.
 ```
 
+#### Hey, wait a minute, you're using blockquotes and code blocks for...that?! That's not semantic!
+
+Yeah, I know. I don't know about you, but I'd rather use a dirty hack than teach economists to consistently type `<div class="blurb">...</div>`.
+
 ### Creating HTML files
 
 First, you'll need to edit `_config.yml` to set the correct URL structure for the chart book.
