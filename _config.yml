@@ -1,7 +1,6 @@
 # Site settings
 title: The Income Tax Illustrated
-description: > # this means to ignore newlines until "baseurl:"
-
+description: "How progressive is the federal income tax? How does it affect decisions about work, saving, and marriage? What is its effect on the U.S. economy?"
 meta_image: cover-meta.png
 url: "http://interactive.taxfoundation.org" # the base hostname & protocol for your site
 baseurl: "/income-tax-illustrated"
