@@ -47,7 +47,7 @@ This is a blue blurb of text.
 
 #### Hey, wait a minute, you're using blockquotes and code blocks for...that?! That's not semantic!
 
-Yeah, I know. I don't know about you, but I'd rather use a dirty hack than teach economists to consistently type `<div class="blurb">...</div>`.
+Yeah, I know. But it's quicker and less error-prone than consistently typing `<div class="blurb">...</div>`.
 
 ### Creating HTML files
 
